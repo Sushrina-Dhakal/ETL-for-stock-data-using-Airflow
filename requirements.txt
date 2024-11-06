@@ -1,0 +1,5 @@
+apache-airflow-providers-http
+yfinance
+pandas
+SQLAlchemy
+psycopg2-binary

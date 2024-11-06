@@ -1,0 +1,38 @@
+[2024-11-06T09:15:08.152+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-06T09:15:08.227+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stock_etl_dag.load_data manual__2024-11-06T09:14:57.873489+00:00 [queued]>
+[2024-11-06T09:15:08.260+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stock_etl_dag.load_data manual__2024-11-06T09:14:57.873489+00:00 [queued]>
+[2024-11-06T09:15:08.265+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 4
+[2024-11-06T09:15:08.296+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): load_data> on 2024-11-06 09:14:57.873489+00:00
+[2024-11-06T09:15:08.312+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'stock_etl_dag', 'load_data', 'manual__2024-11-06T09:14:57.873489+00:00', '--job-id', '39', '--raw', '--subdir', 'DAGS_FOLDER/stock_dag.py', '--cfg-path', '/tmp/tmpvcadsgp3']
+[2024-11-06T09:15:08.316+0000] {standard_task_runner.py:105} INFO - Job 39: Subtask load_data
+[2024-11-06T09:15:08.319+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=2439) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-11-06T09:15:08.321+0000] {standard_task_runner.py:72} INFO - Started process 2480 to run task
+[2024-11-06T09:15:08.424+0000] {task_command.py:467} INFO - Running <TaskInstance: stock_etl_dag.load_data manual__2024-11-06T09:14:57.873489+00:00 [running]> on host f3ce48fa4cc6
+[2024-11-06T09:15:08.587+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stock_etl_dag' AIRFLOW_CTX_TASK_ID='load_data' AIRFLOW_CTX_EXECUTION_DATE='2024-11-06T09:14:57.873489+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-06T09:14:57.873489+00:00'
+[2024-11-06T09:15:08.590+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-11-06T09:15:08.590+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-11-06T09:15:08.591+0000] {logging_mixin.py:190} INFO - Current task name:load_data state:running start_date:2024-11-06 09:15:08.235578+00:00
+[2024-11-06T09:15:08.591+0000] {logging_mixin.py:190} INFO - Dag name:stock_etl_dag and current dag run status:running
+[2024-11-06T09:15:08.592+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-06T09:15:08.623+0000] {stock_dag.py:33} INFO - Loaded data with percentage change and cumulative return:
+[2024-11-06T09:15:09.599+0000] {stock_dag.py:34} INFO -                         Date       Close  Moving_Avg  Exp_Moving_Avg  Daily_Return  Pct_Change  Cumulative_Return
+0  2023-01-09 00:00:00+00:00  130.149994  127.243997      126.792870      0.004089         NaN                NaN
+1  2023-01-10 00:00:00+00:00  130.729996  128.375996      127.508711      0.004456    0.445641           0.004456
+2  2023-01-11 00:00:00+00:00  133.490005  129.801997      128.596219      0.021112    2.111229           0.025663
+3  2023-01-12 00:00:00+00:00  133.410004  131.479999      129.471453     -0.000599   -0.059931           0.025048
+4  2023-01-13 00:00:00+00:00  134.759995  132.507999      130.433006      0.010119    1.011911           0.035421
+5  2023-01-17 00:00:00+00:00  135.940002  133.666000      131.434278      0.008756    0.875637           0.044487
+6  2023-01-18 00:00:00+00:00  135.210007  134.562003      132.120774     -0.005370   -0.536998           0.038878
+7  2023-01-19 00:00:00+00:00  135.270004  134.918002      132.693361      0.000444    0.044374           0.039339
+8  2023-01-20 00:00:00+00:00  137.869995  135.810001      133.634568      0.019221    1.922075           0.059316
+9  2023-01-23 00:00:00+00:00  141.110001  137.080002      134.993737      0.023500    2.350044           0.084211
+[2024-11-06T09:15:09.600+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-11-06T09:15:09.628+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-06T09:15:09.630+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=stock_etl_dag, task_id=load_data, run_id=manual__2024-11-06T09:14:57.873489+00:00, execution_date=20241106T091457, start_date=20241106T091508, end_date=20241106T091509
+[2024-11-06T09:15:09.644+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-11-06T09:15:09.644+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-11-06T09:15:09.645+0000] {logging_mixin.py:190} INFO - Dag name:stock_etl_dag queued_at:2024-11-06 09:14:57.986238+00:00
+[2024-11-06T09:15:09.646+0000] {logging_mixin.py:190} INFO - Task hostname:f3ce48fa4cc6 operator:PythonOperator
+[2024-11-06T09:15:09.686+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-06T09:15:09.793+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-06T09:15:09.803+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
